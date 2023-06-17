@@ -1,0 +1,442 @@
+<!---Log-in-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <Link rel="favicon" href="favicon.ico" ></Link>
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* background-color: #1F252E; */
+        }
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #1F252E;
+            color: white;
+        }
+
+        /*nav */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #00E8F8;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #00E8F8;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+
+        section {
+            margin: 2rem 8.5rem;
+            ;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+
+        .social a {
+            color: #00E8F8;
+            font-size: 1rem;
+            border: 1.6px solid #00E8F8;
+            border-radius: 50%;
+            padding: .35rem;
+            text-align: center;
+            width: 26px;
+        }
+
+        .social a:hover {
+            color: #1F252E;
+            background-color: #00E8F8;
+            box-shadow: 0 0 20px #00E8F8;
+            transition: all .3s ease-in-out;
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+        }
+
+        .images {
+            background-image: url(/img/graph5.png);
+            background-repeat: no-repeat;
+            background-position: 0 -75px;
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0px 16px 4px -10px #00E8F8;
+            width: 528px;
+            height: 400px;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        /* .about {
+            height: 100vw;
+        } */
+
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #244D61;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #1F252E;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+
+        }
+
+        .skills li {
+            margin: 12px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#main"><img src="favicon.ico" alt="logo"> <span style="top: 35px;
+                position: absolute;
+                left: 190px;">My Portfolio</span></a>
+        </div>
+        <nav>
+            <div>
+                <a href="#main" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#project">Projects</a>
+                <a href="#achievement">Achievement</a>
+                <a href="#contect">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="Main">
+        <div class="main">
+            <div class="detail" style="width: 450px;"><!---Sarah -->
+                <h1><span>Hi, It's Me</span> <br> I'm <span style="color:#00E8F8;">Soham zadafiya</span></h1>
+                <p>Student of computer science and engineering at maharaja sayajorao university </p>
+                <div class="social">
+                    <a href="https://linkedin.com/in/soham-zadafiya-145795237" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/sohamzadafiya" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://leetcode.com/sohamzadafiya/" target="_blank"> <i class="bi bi-braces"></i></a>
+                    <!-- <a href="#main" target="_blank"><i class="bi bi-github"></i></a> -->
+                    <!-- <a href="#main" target="_blank"><i class="bi bi-facebook"></i></a> -->
+                    <a href="Soham's Resume.pdf" target="_blank" class="bi bi-download"></a>
+                </div>
+            </div>
+            <div class="images">
+                <img src="My_project-1-removebg-preview.png" alt=""
+                    style="height: 700px;width: auto;left: 100px;position: relative;top: -150px;" width="auto">
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="about" id="about">
+        <div class="about" style="margin: 100px 0px 20px 0px">
+            <h1><span style="font-size: larger; color:#00E8F8 ">A</span><span style="color:white;">bout</span></h1>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <img src="about.png" width="400px" alt="about">
+            </div>
+            <div>
+                <p style="color:white; position: relative; top: 100px;">
+                    "I, am pursuing Computer Science and Engineering at MSU University Baroda, adept in
+                    programming languages such as C, C++, Java, and familiar with essential web development
+                    technologies including HTML, CSS, basic knowledge of JavaScript and SQL. Possess a strong
+                    foundation in Data Structures and Algorithms, with a keen interest in expanding knowledge
+                    and skills in software development."
+                </p>
+            </div>
+        </div>
+       
+
+        </p>
+    </section>
+
+    <section class="education" id="education">
+        <div class="education"  style="margin: 100px 0px 20px 0px">
+            <h1><span style="font-size: larger; color:#00E8F8">E</span><span style="color:white;">ducation</span></h1>
+        </div>
+
+        <div style="display: flex;">
+            <div>
+                <ul style="margin-left: 20px;">
+                    <li>
+                        <div>
+                            <h3 style="color: white;">
+                                Bachelor of Computer Science and Engineering
+                            </h3>
+                            <p style="color: white; margin-top: 5px">"I, am pursuing Computer Science and Engineering at
+                                MSU
+                                University Baroda"</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-top: 20px;">
+                            <h3 style="color: white;">
+                                HSC
+                            </h3>
+                            <p style="color: white; margin-top: 5px">"I am proud to have successfully passed my HSC from
+                                Vidyadhish Vidyasankul School in the 2021 year, achieving an outstanding 88 percentage.
+                                "</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-top: 20px;">
+                            <h3 style="color: white;">
+                                SSC
+                            </h3>
+                            <p style="color: white; margin-top: 5px">"I am proud to have successfully passed my SSC from
+                                Vishudhanand Vidyamandir School in the 2019 year, achieving an outstanding 82
+                                percentage. "</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="education.png" width="350px" height="500px" alt="education" style="top: -150px;
+                position: relative;">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills" style="position: relative;
+    top: -200px;" >
+        <div class="skills" style="margin: 100px 0px 20px 0px">
+            <h1><span style="font-size: larger; color:#00E8F8">S</span><span style="color:white;">kiils</span></h1>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <img src="skills.png" width="400px" alt="Skills">
+            </div>
+            <div class="skills">
+                <ul style="margin-left: 100px;">
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>JAVA</li>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript (Basic)</li>
+                    <li>SQL</li>
+                    <li>React Js (Basic)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project"  id="project" style="position: relative;
+    top: -150px;">
+        <div class="project" style="margin: 100px 0px 0px 0px">
+            <h1><span style="font-size: larger; color:#00E8F8">P</span><span style="color:white;">rojects</span></h1>
+        </div>
+        <div style="display: flex;">
+            <div class="skills">
+                <ul style="margin-left: 50px;">
+                    <li>
+                        <h3>Encryption and Decryption of File </h3>
+                        <p>
+                            "Implemented a Java-based project 'Encryption and
+                            Decryption of Files', ensuring data privacy through advanced
+                            encryption techniques for seamless file protection."
+                        </p>
+                    </li>
+                    <li>
+                        <h3>College Project Management System </h3>
+                        <p>
+                            "Designed and implemented a comprehensive 'College Project
+                            Management System' utilizing SQL, enabling seamless project
+                            coordination, resource allocation, and progress monitoring."
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="project.png" width="400px" alt="Skills" style="top: -70px;
+                position: relative;">
+            </div>
+        </div>
+    </section>
+
+    <section class="achievement" id="achievement" style="position: relative;
+    top: -250px;">
+        <div class="project" id="project" style="margin: 100px 0px 10px 0px">
+            <h1><span style="font-size: larger; color:#00E8F8">A</span><span style="color:white;">chievement</span></h1>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <img src="achievement.png" width="500px" alt="Achievement" style="position: relative; left: -50px;">
+            </div>
+            <div class="achievement">
+                <ul style="position: relative; top: 1px;">
+                    <li style="margin: 10px;"><h4 style="font-size: larger;"><a style="color: #fff;" href="https://leetcode.com/sohamzadafiya/" target="_blank">Solve 400+ DAS Problems in leetcode</a></h4>
+                        <p>"Successfully tackled over 400 DSA problems and dynamic
+                            programming challenges, showcasing a strong aptitude for
+                            problem-solving and a deep understanding of algorithmic
+                            principles."</p>
+                    </li>
+                    <li style="margin: 10px;"><h4 style="font-size: larger;"><a style="color: #fff;" href="https://www.hackerrank.com/sohamzadafiya" target="_blank">5-star Coder at HackerRank</a></h4>
+                        <p>"Acquired a remarkable 5-star rating on HackerRank,
+                            highlighting exemplary coding proficiency and problem-solving
+                            finesse."</p>
+                    </li>
+                    <li style="margin: 10px;"><h4 style="font-size: larger;"><a style="color: #fff;" href="https://www.codechef.com/users/soham_zadafiya" target="_blank">2-star Coder at CodeChef</a></h4>
+                        <p>"Acquired a remarkable 2-star rating on HackerRank,
+                            highlighting exemplary coding proficiency and problem-solving
+                            finesse."</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer id="contect"
+    style="width: 100%;
+            height: 150px;
+            background-color: #000000;
+            position: relative;
+           "
+    >
+        <h3 style="margin-left: 47%; font-weight: 500">find me</h3>
+
+        <h4 style="margin-top: 25px; margin-left: 39%; font-weight: 300;">Email : sohamzadafiya@gmail.com</h4>
+        <h4 style="margin-top: 25px; margin-left: 44%; font-weight: 300">Contect : 9173676867</h4>
+    </footer>
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+</style>
+<!-- <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+  </style> -->
+
+</html>
